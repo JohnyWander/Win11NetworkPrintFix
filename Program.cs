@@ -13,8 +13,7 @@ namespace Win11PrintFIxer
 
 
                 RegistryKey WorkKey = Registry.LocalMachine.OpenSubKey(@"Software\Policies\Microsoft\Windows NT\Printers\RPC", true);
-                // WorkKey.SetValue("RpcOverNamedPipes", 1, RegistryValueKind.DWord);
-                //key.SetValue()
+             
                 WorkKey.SetValue("RpcAuthentication", 0, RegistryValueKind.DWord);
                 WorkKey.SetValue("RpcUseNamedPipeProtocol", 1, RegistryValueKind.DWord);
 
